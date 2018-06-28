@@ -166,7 +166,7 @@ rison.quote = function(x) {
             },
             object: function (x) {
                 if (x) {
-                    if (x instanceof Array) {
+                    if (Object.prototype.toString.call(x) == '[object Array]') {
                         return s.array(x);
                     }
                     // WILL: will this work on non-Firefox browsers?
